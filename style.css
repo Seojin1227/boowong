@@ -306,19 +306,23 @@ section {
     font-size: 1rem;
   }
 
-  .hero-nav-group {
-    flex-direction: column;
+   .hero-nav-group {
+    flex-direction: row;  /* ✅ 세로가 아니라 가로 */
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 0.5rem;
     padding-bottom: 1rem;
   }
 
+
   .hero-nav {
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
+    white-space: nowrap;
   }
 
-    .hero-image img {
-    max-height: 220px;
+  .hero-image img {
+    object-fit: cover
   }
 
   .dropdown-menu {
