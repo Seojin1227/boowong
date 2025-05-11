@@ -15,8 +15,9 @@ h1, h2, p {
 /* Hero Section */
 .hero {
   display: flex;
-  height: 40vh;
-  overflow: hidden;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 
@@ -314,6 +315,10 @@ section {
   .hero-nav {
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
+  }
+
+    .hero-image img {
+    max-height: 220px;
   }
 
   .dropdown-menu {
