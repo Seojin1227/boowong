@@ -306,27 +306,19 @@ section {
     font-size: 1rem;
   }
 
-   .hero-nav-group {
-    flex-direction: row;  /* ✅ 세로가 아니라 가로 */
-    flex-wrap: wrap;
-    justify-content: center;
+  .hero-nav-group {
+    flex-direction: column;
     gap: 0.5rem;
     padding-bottom: 1rem;
   }
 
-
   .hero-nav {
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
-    white-space: nowrap;
   }
 
-  .hero-image {
-    order: -1; /* ✅ 이걸로 이미지를 위로 보냅니다 */
-  }
-
-  .hero-image img {
-    object-fit: cover
+    .hero-image img {
+    max-height: 220px;
   }
 
   .dropdown-menu {
@@ -384,3 +376,60 @@ section {
 
 }
 /* ===== 📱 모바일 대응 CSS 끝 ===== */
+/* ===== Minimal Mobile Fix Patch ===== */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .hero-image {
+    order: -1;
+    width: 100%;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+  }
+
+  .hero-content {
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-nav-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .hero-nav {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    width: auto;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    flex-direction: column;
+  }
+
+  .hero-nav-dropdown:hover .dropdown-menu,
+  .hero-nav-dropdown:focus-within .dropdown-menu {
+    display: flex;
+  }
+}
