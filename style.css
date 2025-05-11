@@ -417,7 +417,7 @@ section {
   }
 
   .dropdown-menu {
-    display: none;
+    display: none !important;
     position: absolute;
     top: 100%;
     left: 0;
