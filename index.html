@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>부엉이펜션</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>부엉이펜션</h1>
+        <p>자연 속에서 가족과 함께 조용히 쉬는 공간</p>
+      </div>
+      <div class="hero-nav-group">
+        <div class="hero-nav-dropdown">
+          <a href="#intro" class="hero-nav" id="goMain">펜션 소개</a>
+          <div class="dropdown-menu">
+            <a href="#greeting" class="hero-subnav nav-link" data-target="greeting">인사말</a>
+            <a href="#facility" class="hero-subnav nav-link" data-target="facility">부대 시설</a>
+            <a href="#location" class="hero-subnav nav-link" data-target="location">오시는 길</a>
+          </div>
+        </div>
+        <a href="#" class="hero-nav" id="goRoom">객실 안내</a>
+        <a href="#" class="hero-nav" id="goReserve">예약 안내</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="images/appearance/2.jpg" alt="펜션 전경" />
+    </div>
+  </section>
+
+  <!-- 메인 섹션 -->
+  <div id="main-sections">
+    <section class="wrapper style1 align-center" id="greeting">
+      <div class="inner">
+        <header>
+          <h2>인사말</h2>
+          <p>부엉이펜션을 찾아주셔서 감사합니다.<br />
+          조용한 자연 속에서 가족과 함께 편안히 쉬어갈 수 있는 공간이 되도록 정성을 다하겠습니다.</p>
+        </header>
+      </div>
+    </section>
+    <section class="wrapper style1 align-center" id="facility">
+      <div class="inner">
+        <header>
+          <h2>부대 시설</h2>
+          <p>편안한 여행을 위한 다양한 부대 시설을 소개합니다.</p>
+        </header>
+        <div class="slider">
+          <img id="sliderImage" src="images/appearance/2.jpg" alt="시설 이미지" />
+          <div class="controls">
+            <button onclick="prevImage()">〈</button>
+            <button onclick="nextImage()">〉</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="wrapper style1 align-center" id="location">
+      <div class="inner">
+        <header>
+          <h2>오시는 길</h2>
+          <p>충북 괴산군 청천면 송문로 57</p>
+          <p>네비게이션에 <strong>부엉이펜션</strong> 또는 <strong>송문로 57</strong> 입력</p>
+        </header>
+        <div class="map-container">
+          <iframe src="https://map.naver.com/p/entry/place/2052827622"
+            width="100%" height="450" frameborder="0" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- 객실안내 섹션 -->
+  <div id="room-section" style="display: none;">
+  <section class="wrapper style1 align-center" id="room">
+    <div class="inner">
+      <header>
+        <h2>객실 안내</h2>
+        <div class="room-tabs">
+          <button class="room-tab active" data-room="big">큰부엉이방</button>
+          <button class="room-tab" data-room="brush">솔부엉이</button>
+          <button class="room-tab" data-room="eagle">수리부엉이방</button>
+          <button class="room-tab" data-room="iron">쇠부엉이방</button>
+          <button class="room-tab" data-room="Kudzu">칡부엉이방</button>
+        </div>
+      </header>
+      <div class="room-contents">
+        <div class="room-content active" id="room-big">
+          <div class="room-slider">
+            <button class="room-prev" data-target="big">〈</button>
+            <img id="bigRoomImage" src="images/parlor/big/1.jpg" alt="큰부엉이방" />
+            <button class="room-next" data-target="big">〉</button>
+          </div>
+          <h3>큰부엉이방</h3>
+          <p>2룸 + 거실 구조의 넓은 객실
+          <br>기준 인원: 8명 / 최대 인원: 10명
+          <br>TV, 에어컨, 침대, 욕실, 주방 등 완비
+          <br>비수기 200,000 / 성수기 350,000
+          </p>
+        </div>
+
+        <div class="room-content" id="room-brush">
+          <div class="room-slider">
+            <button class="room-prev" data-target="brush">〈</button>
+            <img id="brushRoomImage" src="images/parlor/brush/1.jpg" alt="솔부엉이방" />
+            <button class="room-next" data-target="brush">〉</button>
+          </div>
+          <h3>솔부엉이방</h3>
+          <p>원룸형 구조의 아늑한 객실
+          <br>기준 인원: 2명 / 최대 인원: 4명
+          <br>TV, 침대, 욕실, 주방 등 완비
+          <br>비수기 100,000 / 성수기 150,000
+          </p>
+        </div>
+
+        <div class="room-content" id="room-eagle">
+          <div class="room-slider">
+            <button class="room-prev" data-target="eagle">〈</button>
+            <img id="eagleRoomImage" src="images/parlor/eagle/1.jpg" alt="수리부엉이방" />
+            <button class="room-next" data-target="eagle">〉</button>
+          </div>
+          <h3>수리부엉이방</h3>
+          <p>깔끔한 구조의 객실
+          <br>기준 인원: 2명 / 최대 인원: 4명
+          <br>TV, 에어컨, 욕실, 주방 등 완비
+          <br>비수기 100,000 / 성수기 150,000
+          </p>
+        </div>
+
+        <div class="room-content" id="room-iron">
+          <div class="room-slider">
+            <button class="room-prev" data-target="iron">〈</button>
+            <img id="ironRoomImage" src="images/parlor/iron/1.jpg" alt="쇠부엉이방" />
+            <button class="room-next" data-target="iron">〉</button>
+          </div>
+          <h3>쇠부엉이방</h3>
+          <p>깔끔한 구조의 객실
+          <br>기준 인원: 2명 / 최대 인원: 4명
+          <br>TV, 에어컨, 욕실, 주방 등 완비
+          <br>비수기 100,000 / 성수기 150,000
+          </p>
+        </div>
+
+        <div class="room-content" id="room-Kudzu">
+          <div class="room-slider">
+            <button class="room-prev" data-target="Kudzu">〈</button>
+            <img id="KudzuRoomImage" src="images/parlor/Kudzu/1.jpg" alt="칡부엉이방" />
+            <button class="room-next" data-target="Kudzu">〉</button>
+          </div>
+          <h3>칡부엉이방</h3>
+          <p>아늑하고 조용한 공간
+          <br>기준 인원: 2명 / 최대 인원: 4명
+          <br>TV, 욕실, 주방 등 완비
+          <br>비수기 100,000 / 성수기 150,000
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<script>
+  const tabs = document.querySelectorAll(".room-tab");
+  const contents = document.querySelectorAll(".room-content");
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      const target = tab.dataset.room;
+      tabs.forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+      contents.forEach(content => {
+        content.classList.remove("active");
+        if (content.id === `room-${target}`) {
+          content.classList.add("active");
+        }
+      });
+    });
+  });
+
+  const roomImages = {
+    big: ["images/parlor/big/1.jpg", "images/parlor/big/2.jpg","images/parlor/big/3.jpg","images/parlor/big/4.jpg","images/parlor/big/5.jpg","images/parlor/big/6.jpg","images/parlor/big/7.jpg","images/parlor/big/8.jpg","images/parlor/big/9.jpg","images/parlor/big/10.jpg"],
+    brush: ["images/parlor/brush/1.jpg", "images/parlor/brush/2.jpg","images/parlor/brush/3.jpg","images/parlor/brush/4.jpg","images/parlor/brush/5.jpg","images/parlor/brush/6.jpg","images/parlor/brush/7.jpg"],
+    eagle: ["images/parlor/eagle/1.jpg", "images/parlor/eagle/2.jpg","images/parlor/eagle/3.jpg","images/parlor/eagle/4.jpg","images/parlor/eagle/5.jpg","images/parlor/eagle/6.jpg"],
+    iron: ["images/parlor/iron/1.jpg", "images/parlor/iron/2.jpg","images/parlor/iron/4.jpg","images/parlor/iron/5.jpg"],
+    Kudzu: ["images/parlor/Kudzu/1.jpg", "images/parlor/Kudzu/2.jpg","images/parlor/Kudzu/3.jpg","images/parlor/Kudzu/4.jpg","images/parlor/Kudzu/5.jpg","images/parlor/Kudzu/6.jpg"]
+  };
+  const roomIndices = { big: 0, brush: 0, eagle: 0, iron: 0, Kudzu: 0 };
+  document.querySelectorAll(".room-prev, .room-next").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const room = btn.dataset.target;
+      const img = document.getElementById(`${room}RoomImage`);
+      const isNext = btn.classList.contains("room-next");
+      const max = roomImages[room].length;
+      roomIndices[room] = isNext
+        ? (roomIndices[room] + 1) % max
+        : (roomIndices[room] - 1 + max) % max;
+      img.src = roomImages[room][roomIndices[room]];
+    });
+  });
+</script>
+
+  <!-- 예약 안내 섹션 -->
+  <div id="reserve-section" style="display: none;">
+    <section class="wrapper style1 align-center">
+      <div class="inner">
+        <h2>예약 안내</h2>
+        <p>편리하고 빠른 예약을 위해 아래 정보를 확인해주세요.</p>
+        <ul style="text-align: left; max-width: 600px; margin: 1rem auto; line-height: 1.8;">
+          <li><strong>📞 예약 전화:</strong> 0507-1488-1595</li>
+          <li><strong>⏰ 입실 / 퇴실:</strong> 입실 15:00 / 퇴실 11:00</li>
+          <li><strong>💳 예약 방법:</strong> 전화 </li>
+          <li><strong>🐾 반려동물 동반:</strong> 10kg 이하, 최대 3마리까지 동반 가능<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;※ 마리당 15,000원 추가 요금</li>
+          <li><strong>🍖 바베큐 셋팅:</strong> 25,000원 (숯 + 그릴 포함)</li>
+          <li><strong>🔥 불멍 체험:</strong> 30,000원 (장작 제공)</li>
+          <li><strong>⚠️ 유의사항:</strong> 실내 금연</li>
+          <li><strong>🌧️ 환불 규정:</strong> 이용 7일 전까지 전액 환불</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <!-- 맨 위로 버튼 -->
+  <button id="toTopBtn" class="to-top-btn" title="맨 위로">↑</button>
+
+  <!-- JS -->
+  <script>
+    const images = [
+      'images/appearance/2.jpg', 'images/appearance/3.jpg', 'images/appearance/4.jpg'
+    , 'images/appearance/5.jpg', 'images/appearance/7.jpg', 'images/appearance/12.jpg'
+    , 'images/appearance/13.jpg', 'images/appearance/16.jpg', 'images/appearance/17.jpg'
+    ];
+    let current = 0;
+    function showImage(index) {
+      document.getElementById('sliderImage').src = images[index];
+    }
+    function nextImage() {
+      current = (current + 1) % images.length;
+      showImage(current);
+    }
+    function prevImage() {
+      current = (current - 1 + images.length) % images.length;
+      showImage(current);
+    }
+  </script>
+
+  <!-- Section 전환 스크립트 -->
+  <script>
+    const mainSections = document.getElementById("main-sections");
+    const roomSection = document.getElementById("room-section");
+    const reserveSection = document.getElementById("reserve-section");
+
+    function hideAllSections() {
+      mainSections.style.display = "none";
+      roomSection.style.display = "none";
+      reserveSection.style.display = "none";
+    }
+
+    document.getElementById("goMain").addEventListener("click", function(e) {
+      e.preventDefault(); hideAllSections(); mainSections.style.display = "block";
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    document.getElementById("goRoom").addEventListener("click", function(e) {
+      e.preventDefault(); hideAllSections(); roomSection.style.display = "block";
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    document.getElementById("goReserve").addEventListener("click", function(e) {
+      e.preventDefault(); hideAllSections(); reserveSection.style.display = "block";
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    document.querySelectorAll(".nav-link").forEach(link => {
+      link.addEventListener("click", function(e) {
+        const targetId = this.dataset.target;
+        const targetEl = document.getElementById(targetId);
+        if (roomSection.style.display === "block" || reserveSection.style.display === "block") {
+          e.preventDefault(); hideAllSections(); mainSections.style.display = "block";
+          setTimeout(() => {
+            targetEl.scrollIntoView({ behavior: "smooth" });
+          }, 100);
+        }
+      });
+    });
+  </script>
+
+  <script>
+    const toTopBtn = document.getElementById("toTopBtn");
+    window.addEventListener("scroll", () => {
+      toTopBtn.style.display = window.scrollY > 200 ? "block" : "none";
+    });
+    toTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>
