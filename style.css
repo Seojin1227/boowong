@@ -321,6 +321,10 @@ section {
     white-space: nowrap;
   }
 
+  .hero-image {
+    order: -1; /* ✅ 이걸로 이미지를 위로 보냅니다 */
+  }
+
   .hero-image img {
     object-fit: cover
   }
