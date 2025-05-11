@@ -354,7 +354,9 @@ section {
   }
 
   .room-tab {
-    width: 100%;
+    width: auto;   /* 이거 너무 크게 보이면 삭제하거나 수정 */
+    font-size: 0.95rem;
+    padding: 0.4rem 0.6rem;
   }
 
   ul {
